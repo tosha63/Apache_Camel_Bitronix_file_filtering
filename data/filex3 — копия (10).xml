@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<client xmlns="http://cxf.apache.org/jaxws">
+    <properties>
+        что-то3
+    </properties>
+</client>
