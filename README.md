@@ -1,4 +1,4 @@
-# Apache_Camel_file_filtering
+# Apache_Camel_Bitronix_file_filtering
 There is a folder with files. Using the Apache Camel tools, 
 implement the following process: the file is taken from the folder, 
 then, depending on the type, some actions are performed. If the file 
