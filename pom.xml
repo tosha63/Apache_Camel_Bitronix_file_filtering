@@ -12,7 +12,8 @@
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
         <camel>3.18.0</camel>
-        <log4j2-version>2.18.0</log4j2-version>
+        <slf4j.version>2.0.0-alpha7</slf4j.version>
+        <activeMQ>5.17.0</activeMQ>
     </properties>
 
     <dependencies>
@@ -22,22 +23,29 @@
             <artifactId>camel-core</artifactId>
             <version>${camel}</version>
         </dependency>
+
+
         <dependency>
             <groupId>org.apache.camel</groupId>
-            <artifactId>camel-main</artifactId>
+            <artifactId>camel-activemq</artifactId>
             <version>${camel}</version>
         </dependency>
 
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>2.0.0-alpha7</version>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>org.apache.camel</groupId>
-            <artifactId>camel-activemq</artifactId>
-            <version>${camel}</version>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-all</artifactId>
+            <version>${activeMQ}</version>
         </dependency>
 
 
@@ -47,10 +55,24 @@
             <version>42.4.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jta-bitronix</artifactId>
+            <version>2.4.13</version>
+        </dependency>
+
+
+
 
     </dependencies>
 
-    <build>
+   <!-- <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.camel</groupId>
@@ -62,6 +84,6 @@
                 </configuration>
             </plugin>
         </plugins>
-    </build>
+    </build>-->
 
 </project>
